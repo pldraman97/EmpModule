@@ -1,0 +1,194 @@
+<html>  
+   <head>  
+      <title>sign up</title>  
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">        
+      <link rel = "stylesheet"  
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">  
+      <link rel = "stylesheet"  
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		 
+      <script type = "text/javascript"  
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>             
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">  
+      </script> 
+
+	 <script>
+	    $(document).ready(function(){
+    $('select').formSelect();
+  });
+       </script>
+	   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="https://api.jqueryui.com/datepicker/#option-yearRange"></script>
+    <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker({yearRange: [1970,2002]});
+			var element = document.querySelector('.datepicker');
+            M.Datepicker.getInstance(element).setDate(new Date(1970,1,1), true);
+        });
+    </script>
+
+	   <style>
+	     #main{
+		border:1px solid black;
+		border-radius:10px;
+		padding:2% 5%;
+		margin-top:9%;
+		width:50%;
+		margin-left:23%;
+		background-color:white;
+		
+		}
+		img
+		{
+			margin-left: 31.5%;
+		}
+       
+		 
+		 #signup,#reset{
+		padding:5px;}
+		
+		body{
+		background-image:url('38927.jpg');
+		background-attachment:fixed;
+		}
+
+	    </style>
+	<script>
+	function validate(){
+	var x=document.forms["myform"]["pass"].value;
+	var y=document.forms["myform"]["re"].value;
+	var z=document.forms["myform"]["phone"].value;
+	var w=document.forms["myform"]["phone2"].value;
+	if((z<=999999999)||(z>9999999999))
+	{alert('Please enter a valid 10-digit phone no')
+	return false;}
+
+    if((w<=999999999)||(w>9999999999))
+	{alert('Please enter a valid 10-digit  alt. phone no')
+	return false;}
+	if(w==z)
+	{alert('Please enter two different phone no.')
+	return false;}
+    if(x!=y)
+	{alert('Re-typed password  doesnot match password')
+	return false;}
+	
+	}
+	
+	
+	
+	
+	</script>
+	
+   </head>  
+     
+        <body class = "container">     
+            <div class = "row" id="main">
+            <img src="screenshot.png" alt="LOGO" height="150px" width="150px"><br><br>
+    	         <form class="col s12"  action="RegistrationSuccess.html" name="myform" onsubmit="return validate()" >
+                 <div class="row">
+         		    <div class="input-field col s4">
+					 <input type="text" id="fname" name="fname" required>
+					 <label for="fname">First name</label></div>
+					 <div class="input-field col s4">
+					 <input type="text" id="mname" name="mname">
+					 <label for="mname">Middle name</label></div>
+					 <div class="input-field col s4">
+					 <input type="text" id="lname" name="lname" required>
+					 <label for="lname">Last name</label></div>
+					 </div>
+					<div class="row">
+					<div class="input-field  col s8">
+					<input type="text" class="datepicker" id="dob" name="dob"  required>
+					<label for="dob">Date of birth</label>
+					</div>
+					
+					<div class="input-field col s4" >
+		             <select name="gender" id="gender">
+					   <option value="" disabled selected>Gender</option>
+                       <option value="1">Male</option>
+                       <option value="2">Female</option>
+                       <option value="3">Others</option>
+                     </select>
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="input-field col s12">
+					     <i class = "material-icons prefix">assignment</i>
+                        <input type="text" id="street1" name="street1" required>
+                      	<label for="street1">Street address</label>
+					</div>
+					</div>
+					<div class="row">
+                    <div class="input-field col s12">
+					    <i class = "material-icons prefix">assignment</i>
+                        <input type="text" id="street2" name="street2">
+                      	<label for="street2">Street address line 2</label>  					
+					</div>
+					</div>
+					<div class="row">
+					<div class="input-field col s6">
+					<input type="text" id="city" name="city" required>
+                    <label for="city">City</label>
+                    </div>	
+                    <div class="input-field col s6"> 
+					<input type="text" id="state" name="state" required>
+                    <label for="state">State/Province</label>
+                    </div>
+                    </div>
+                     
+                    <div class="row">
+		            <div class="input-field col s12">
+			           <i class = "material-icons prefix">phone</i>  
+			           <input type="number"  name="phone" id="phone"  required></textarea>
+			           <label for="phone">Mobile no</label>
+			        </div>
+			        </div>	
+
+                    <div class="row">
+		            <div class="input-field col s12">
+			           <i class = "material-icons prefix">phone</i>  
+			           <input type="number"  name="phone2" id="phone2" required></textarea>
+			           <label for="phone2"> Alt. Mobile no</label>
+			        </div>
+			        </div>		
+
+                    <div class="row">
+                    <div class="input-field col s12">
+					<i class = "material-icons prefix">email</i>
+                    <input type="email"	id="mail"name="mail" required>
+                    <label for="mail">E-mail</label>
+					</div>
+					</div>
+					
+					<div class="row">
+                    <div class="input-field col s12">
+					<i class = "material-icons prefix">vpn_key</i>
+                    <input type="password" id="pass" name="pass" required>
+                    <label for="pass">Password</label>
+					</div>
+					</div>
+					
+					<div class="row">
+                    <div class="input-field col s12">
+					<i class = "material-icons prefix">vpn_key</i>
+                    <input type="password"  id="re" name="re" required>
+                    <label for="re">Re-type Password</label>
+					</div>
+					</div>
+					<div class="row">
+					<input type="checkbox" id="check" name="check" required>
+					<label for="check">I have checked all my details(compulsory).</label>
+					</div>
+					
+					<div class="row" > 
+				<input type="submit"  class = "btn waves-effect waves-teal"  id="signup" value="Signup" name="submit"> 
+				<span style="white-space: pre;">     </span>
+				<input type="Reset" class = "btn waves-effect waves-teal"  id="reset" value="Reset" name="reset"> 
+			</div>
+		</div>
+	</body>
+</html>	

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>View Account Details</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap-4.3.1.css" rel="stylesheet">
+  </head>
+  <body s style="background-color: #f0f0f0">
+	  <div align="center">
+	  <a class="navbar-brand" href="https://nitkkr.ac.in"><img  style="float:left;" src="screenshot.png" height="100px" width="100px" alt="NIT KKR LOGO">
+		  <strong style="font-size: 30px;">National Institute of Technology Kurukshetra</strong><br>
+		  <strong>Institute of National Importance</strong>		  </a>
+	  </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"> <a class="nav-link" href="https://nitkkr.ac.in">Home <span class="sr-only">(current)</span></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="Dashboard.html">Dashboard</a> </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> LMS Dashoboard </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="leave single column.html">Request a leave</a> 
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Manage Account.html">View account details</a> 
+			  <a class="dropdown-item" href="Feedback form.html">Feedback form</a> 
+            </div>
+          </li>
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			
+        </form>
+		<span style="white-space: pre">       </span>  <a href="Manage Account.html"><img src="user.png" alt="user" height="30px" width="30px">User</a>
+      </div>
+    </nav>
+	  <div>&nbsp;</div>
+	  <div>&nbsp;</div>
+	      <div class="container" >
+      <div class="row">
+        <div class="col-12 col-md-8 mx-auto">
+          <div class="jumbotron">
+            <div class="row text-center">
+              <div class="text-center col-12">
+                <h2>Account Details</h2>
+              </div>
+              <div class="text-center col-12">
+                <!-- CONTACT FORM https://github.com/jonmbake/bootstrap3-contact-form -->
+                <form id="feedbackForm" class="text-center">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" aria-describedby="nameHelp" value="Agnes Johnson" readonly disabled style="background-color: white">
+                  </div>
+					 <div class="form-group">
+                    <label for="DOB">Date of birth</label>
+                    <input type="text" class="form-control" id="DOB" name="DOB" placeholder="DOB" aria-describedby="dateHelp" value="28-12-1990" readonly disabled style="background-color: white">
+                   </div>
+					 <div class="form-group">
+                    <label for="Street Address">Street Address</label>
+                    <input type="text" class="form-control" id="Street Address" name="Street Address" placeholder="Street Address" aria-describedby="StreetHelp" value="Flat No. 37,Third Floor" readonly disabled style="background-color: white">
+                  </div>
+				 <div class="form-group">
+                    <label for="Street Address2">Street Address Line 2</label>
+                    <input type="text" class="form-control" id="Street Address2" name="Street Address2" placeholder="Street Address Line 2" aria-describedby="Street2Help" value="Peace Apartments" readonly disabled style="background-color: white">
+                  </div>
+					<div class="form-group">
+                    <label for="City">City</label>
+                    <input type="text" class="form-control" id="City" name="City" placeholder="City" aria-describedby="cityHelp" value="New York City" readonly disabled style="background-color: white">
+                  </div>
+				
+					<div class="form-group">
+                    <label for="Province">Province/State</label>
+                    <input type="text" class="form-control" id="State" name="State" placeholder="State" aria-describedby="stateHelp" value="New York" readonly disabled style="background-color: white">
+                  </div>
+					<div class="form-group">
+                    <label for="mobile">Mobile No.</label>
+                    <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile No." aria-describedby="mobileHelp" value="9876543210" readonly disabled style="background-color: white">
+                    </div>
+					<div class="form-group">
+                    <label for="a_mobile">Alternate Mobile No.</label>
+                    <input type="text" class="form-control" id="a_mobile" name="a_mobile" placeholder=" Alternate Mobile No." aria-describedby="a_mobileHelp" value="9876504321" readonly disabled style="background-color: white">
+                   </div>
+                  <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" aria-describedby="emailHelp" value="agnesjohnson@xyz.com" readonly disabled style="background-color: white">
+                   </div>
+                 
+
+                </form>
+              </div>
+				<div class="text-center col-12">
+                <h4>Contact Administrator For Any Changes</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center" style="background-color: #f0f0f0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © NIT Kurukshetra. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="jquery-3.3.1.min.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="popper.min.js"></script> 
+    <script src="bootstrap-4.3.1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html>  
+   <head>  
+      <title>Leave application</title>  
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">        
+      <link rel = "stylesheet"  
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">  
+      <link rel = "stylesheet"  
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">  
+		     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+      <script type = "text/javascript"  
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>             
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">  
+      </script> 
+	  <script>
+	  $(document).ready(function(){
+    $('select').formSelect();
+		  $('select').change(function() { 
+                var str = $('select').val(); 
+				if(str === "Annual leave")
+					$("#Cur").text("  Current balance: 8 days");
+				if(str === "FMLA")
+					$("#Cur").text("  Current balance: 195 days");
+				if(str === "Sick leave")
+					$("#Cur").text("  Current balance: 18 days");
+				if(str === "TOIL")
+					$("#Cur").text("  Current balance: 0 days");
+				if(str === "Work from home")
+					$("#Cur").text("  Current balance: 0 days");
+				
+            });
+  });
+       </script>
+	    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="https://api.jqueryui.com/datepicker/#option-yearRange"></script>
+	<script>
+	$(document).ready(function () {
+            $('.datepicker').datepicker({yearRange: [2020,2025]});
+			
+        });
+		</script>
+		
+    <script>
+	    $(document).ready(function(){
+    $('.timepicker').timepicker();
+  });</script>
+   
+	   <script> 
+	   function validate(){
+         var z=document.forms["myform"]["phone"].value;
+	     if((z<=999999999)||(z>9999999999))
+	     {alert('Please enter a valid 10-digit phone no')
+	     return false;}}
+    </script> 
+	
+	   <style>
+	    #main{
+		border:1px solid black;
+		border-radius:10px;
+		padding:2% 5%;
+		margin-top:9%;
+		width:45%;
+		margin-left:25%;
+		background-color:white;
+		
+		}
+
+        img{
+		  margin-left:29%;
+	     }
+		
+		p{
+		margin-top:8px;
+		}
+		
+		#submit,#reset{
+		padding:5px;}
+		
+		body{
+		background-image:url('38927.jpg');
+		background-attachment:fixed  ;
+		}
+
+
+	  </style>
+   </head>  
+  
+   <body class="container">
+       <div class="row" id="main">
+	      <img src="screenshot.png" alt="LOGO" height="150px" width="150px"><br>
+	     <form class="col s12" action="leave application submission.html" name="myform" onsubmit="return validate()">
+		 <div class="row">
+		  <div class="input-field col s12" >
+		  <select name="leave type" id="leave" required  onselect="myfunction()">
+            <option  value="" disabled selected hidden>Leave Type</option>	  
+           <option value="Annual leave">Annual leave</option>
+            <option value="FMLA">FMLA</option>
+            <option value="Sick leave">Sick leave</option>
+            <option value="TOIL">TOIL</option>
+            <option value="Work from home">Work from home</option>
+          </select>
+			   <span id="Cur" style="white-space: pre"></span>
+		  </div>  
+		  </div>
+		  <div class="row">
+		    <div class="input-field col s6">
+              <input type="text" class="datepicker" name="datefrom"  id="datefrom" required>		
+              <label for="datefrom">Leave start from</label> 
+            </div>			  
+            <div class="input-field col s6">		    
+			<i class = "material-icons prefix"> access_time</i> 
+              <input type="text"  class="timepicker"  name="timefrom" id="timefrom" required>		
+              <label for="timefrom">Time</label> 				  
+		      </div>
+		    </div>
+		    <div class="row">
+		    <div class="input-field col s6">
+              <input type="text" class="datepicker" name="dateto"  id="dateto" required>		
+              <label for="dateto">Leave end on</label> 
+            </div>			  
+         <div class="input-field col s6">
+		    <i class = "material-icons prefix"> access_time</i>  
+            <input type="text" class="timepicker"  name="timeto" id="timeto" required>		
+              <label for="timeto">Time</label> 				  
+		  </div>
+		  </div>
+		  <div class="row">
+		      <div class="input-field col s12">
+			   <i class = "material-icons prefix">mode_edit</i>  
+
+			   <textarea class="materialize-textarea"  name="reason" id="reason"></textarea>
+			   <label for="reason">Reason for leave(optional)</label>
+			</div>
+			</div>
+		 <div class="row">
+		      <div class="input-field col s12">
+			   <i class = "material-icons prefix">assignment</i>  
+
+			   <textarea class="materialize-textarea"  name="add"id="address" required></textarea>
+			   <label for="address">Contact address</label>
+			</div>
+			</div>
+			<div class="row">
+		      <div class="input-field col s12">
+			   <i class = "material-icons prefix">phone</i>  
+			   <input type="number" id="phone" name="phone"  required>
+			   <label for="phone">Contact phone</label>
+			</div>
+			</div>
+			<div class ="row">
+			<p>Doctor's certificate(optional):- 
+			<input type="radio" id="yes" name="certificate">
+			<label for="yes">Yes</label>
+			<input type="radio" id="no" name="certificate">
+			<label for="no">No</label>
+			</p>
+				<h6>Note: If balance of specified category is exhausted then the leaves will be counted as FMLA.</h6>
+			</div>
+			
+			<div class="row" > 
+				<input type="submit"  class = "btn waves-effect waves-teal"id="submit" value="Apply" name="submit"> 
+				<span style="white-space: pre;">     </span>
+				<input type="Reset" class = "btn waves-effect waves-teal" id="reset" value="Reset" name="reset"> 
+			</div>
+		   </form>
+		</div>
+	</body>
+</html>	
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+ 		
